@@ -1,71 +1,140 @@
-# Getting Started with Create React App
+# 📊 Predict Move — Learn Stock Trading & Investments
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Predict Move** is a subscription-based online learning platform for mastering stock trading, financial markets, and investment strategies. Built using the **MERN** stack, the platform delivers high-quality courses and real-time sessions through a secure and scalable web application.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔧 Tech Stack
 
-### `npm start`
+- **Frontend:** React.js, Redux Toolkit, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Authentication & Security:** JWT, bcrypt, CSRF Protection, CORS
+- **Media Delivery:** Static assets served via CDN
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- 📚 **Subscription-Based Courses** — Access premium content on finance and trading  
+- 🔐 **Secure Auth System** — Login & registration with hashed passwords and JWTs  
+- 📡 **CDN Media Hosting** — Efficient streaming of course videos and resources  
+- 🔄 **Role-Based Access** — Admin & user dashboards with custom privileges  
+- 🧾 **Course Management** — Admin tools to manage courses, users, and sessions  
+- 🌍 **Cross-Origin Security** — CSRF & CORS implemented for API protection  
+- 🧠 **Progress Tracking** — Monitor learning and course completion in real-time
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🗂️ Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+predict-move/
+├── client/                  # React frontend
+│   ├── public/              # Public assets
+│   └── src/
+│       ├── assets/          # Images, icons, media files (via CDN)
+│       ├── components/      # Reusable React components
+│       ├── pages/           # Route-based page components
+│       ├── redux/           # Redux slices and store setup
+│       ├── services/        # API calls via Axios
+│       └── utils/           # Utility functions
+│
+├── server/                  # Express backend
+│   ├── controllers/         # Route logic (courses, users, auth)
+│   ├── middleware/          # Auth, error handling, CSRF, etc.
+│   ├── models/              # Mongoose models (User, Course, etc.)
+│   ├── routes/              # Express route definitions
+│   ├── config/              # DB and environment config
+│   └── utils/               # Helpers, validators
+│
+├── .env                     # Environment variables
+├── .gitignore
+├── README.md
+├── package.json
+└── LICENSE
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔐 Security Highlights
 
-### `npm run eject`
+| Feature            | Implementation                             |
+|--------------------|---------------------------------------------|
+| Password Hashing   | `bcrypt`                                    |
+| Token Auth         | `JWT (Access & Refresh Tokens)`             |
+| CSRF Protection    | `csurf` middleware                          |
+| CORS               | Configured to allow trusted origins only    |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌐 CDN Media Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Static content like course thumbnails and video streams are served via CDN for improved speed and reliability.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```html
+<img src="https://cdn.predictmove.com/images/stock-basics.jpg" alt="Course Image" />
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧪 Getting Started (Development)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Clone the Repository
 
-### Code Splitting
+```bash
+git clone https://github.com/PreethamSub/predictmoveapp.git
+cd predict-move
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Setup Environment Variables
 
-### Analyzing the Bundle Size
+Create `.env` files in both `/client` and `/server` folders with necessary variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```env
+# .env (server)
+JWT_SECRET=mykey
+PORT=3030
+MONGODB_URL="mongodb://...<URI>"
+```
 
-### Making a Progressive Web App
+### 3. Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Install server dependencies
+cd server && npm install
 
-### Advanced Configuration
+# Install client dependencies
+cd ../client && npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Run the App
 
-### Deployment
+```bash
+# In one terminal, run backend
+cd server && npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# In another terminal, run frontend
+npm start
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌱 Roadmap
 
+- ✅ Initial Course Upload & Access Control   
+- 🧠 AI-Powered Stock Prediction Modules *(coming soon)* 
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Feel free to fork the project.
+
+---
+
+## 📬 Contact
+
+Have questions or feedback? Reach out!!
+
+---
