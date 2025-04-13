@@ -1,6 +1,6 @@
 # 📊 Predict Move — Learn Stock Trading & Investments
 
-**Predict Move** is a subscription-based online learning platform for mastering stock trading, financial markets, and investment strategies. Built using the **MERN** stack, the platform delivers high-quality courses and real-time sessions through a secure and scalable web application.
+**Predict Move** is a subscription-based online learning platform for mastering stock trading, financial markets, and investment strategies. Built using the **MERN** stack, the platform delivers high-quality courses and real-time sessions through a secure and scalable web application. (View a live demo [here](https://predictmove.glitch.me/))
 
 ---
 ![predictmove](https://github.com/user-attachments/assets/1293139c-98d9-42fa-a1af-424fc3d6b11f)
